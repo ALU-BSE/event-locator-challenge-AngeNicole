@@ -1,0 +1,269 @@
+/* Event Locator - Custom Styles */
+
+:root {
+    --meetup-red: #e51c44;
+    --meetup-red-dark: #cc1a3d;
+    --meetup-red-light: #f8e6ea;
+    --text-dark: #2d2d2d;
+    --text-muted: #717171;
+    --border-light: #e6e6e6;
+    --bg-light: #f8f9fa;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Meetup Brand Colors */
+.text-meetup {
+    color: var(--meetup-red) !important;
+}
+
+.bg-meetup {
+    background-color: var(--meetup-red) !important;
+}
+
+.btn-meetup {
+    background-color: var(--meetup-red);
+    border-color: var(--meetup-red);
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-meetup:hover {
+    background-color: var(--meetup-red-dark);
+    border-color: var(--meetup-red-dark);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-meetup {
+    border-color: var(--meetup-red);
+    color: var(--meetup-red);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-meetup:hover {
+    background-color: var(--meetup-red);
+    border-color: var(--meetup-red);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.badge.bg-meetup {
+    background-color: var(--meetup-red) !important;
+}
+
+/* Navigation */
+.navbar {
+    border-bottom: 1px solid var(--border-light);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--meetup-red) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+.search-container {
+    border: 1px solid var(--border-light);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Cards */
+.card {
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.event-card {
+    cursor: pointer;
+}
+
+.event-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Category Cards */
+.category-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: white;
+    border: 1px solid var(--border-light);
+}
+
+.category-card:hover {
+    background-color: var(--meetup-red-light);
+    border-color: var(--meetup-red);
+    transform: translateY(-3px);
+}
+
+.category-card i {
+    font-size: 2.5rem;
+    color: var(--meetup-red);
+    margin-bottom: 1rem;
+}
+
+.category-card h5 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.category-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Event List Styles */
+.event-list-item {
+    border-bottom: 1px solid var(--border-light);
+    padding: 1.5rem 0;
+}
+
+.event-list-item:last-child {
+    border-bottom: none;
+}
+
+.event-list-item .event-image {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: var(--meetup-red);
+    box-shadow: 0 0 0 0.2rem rgba(229, 28, 68, 0.25);
+}
+
+.form-select:focus {
+    border-color: var(--meetup-red);
+    box-shadow: 0 0 0 0.2rem rgba(229, 28, 68, 0.25);
+}
+
+/* Badges */
+.badge {
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: auto;
+        padding: 3rem 0;
+    }
+    
+    .search-container {
+        margin-top: 2rem;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .category-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .category-card i {
+        font-size: 2rem;
+    }
+}
+
+/* Utilities */
+.text-truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.text-truncate-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Event Details Page */
+.sticky-top {
+    position: sticky;
+    top: 20px;
+    z-index: 1020;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--meetup-red);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--meetup-red-dark);
+}
